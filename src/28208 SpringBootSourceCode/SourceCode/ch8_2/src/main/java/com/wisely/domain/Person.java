@@ -1,5 +1,4 @@
 package com.wisely.domain;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,16 +8,13 @@ import javax.persistence.NamedQuery;
 @NamedQuery(name = "Person.withNameAndAddressNamedQuery",
 query = "select p from Person p where p.name=?1 and address=?2")
 public class Person {
+
 	@Id //2
 	@GeneratedValue //3
 	private Long id;
-	
 	private String name;
-	
 	private Integer age;
-	
 	private String address;
-	
 	
 	
 	public Person() {
